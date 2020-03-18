@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h3 class="formTitle">
+            kindly Register Your Data
+        </h3>
+
+            <form id="regForm" name="add">
+
+            <div class="inputDiv ">
+                <div class="formElemnt">
+                    <input type="text" id="userName" class="input inputElement" placeholder="Entet Your Name" required>
+                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                </div>
+                <div class="formElemnt">
+                    <input type="text" id="position" class="input inputElement" placeholder="Enter Your Position" required>
+                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                </div>
+                <div class="btnsCont">
+                    <div id="editBtn" class="genBtnClassCont editBtnClass"> <button type="submit"
+                            class="genBtnClass">Edit</button> </div>
+                    <div id="addBtn" class="genBtnClassCont"> <button type="submit" class="genBtnClass">Add</button>
+                    </div>
+                    <div class="genBtnClassCont"><button type="button" onClick="resetForm()"
+                            class="Cancel genBtnClass">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+        <div id="newContainer">
+            <div class="item" id="div0">
+                <h2 class="item_input "> Mostafa</h2>
+                <h3 class="item_input"> Front End Developer</h3>
+                <button class="edit" onClick="edit(this)">EDIT</button>
+                <button class="remove" onClick="remove(this)">REMOVE</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

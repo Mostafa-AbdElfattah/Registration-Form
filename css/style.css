@@ -1,0 +1,401 @@
+/*Fonts *********************************************************************************/
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url("../fonts/ubuntu/Ubuntu-Bold.ttf");
+}
+/***************************************************************************************/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body
+ {
+  height: 100vh;
+  font-family: Ubuntu-Regular, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/*****************************************************/
+a {
+  font-family: Ubuntu-Regular;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/****************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+p {
+  font-family: Ubuntu-Regular;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #666666;
+  margin: 0px;
+}
+
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #555555;
+}
+input:-moz-placeholder {
+  color: #555555;
+}
+input::-moz-placeholder {
+  color: #555555;
+}
+input:-ms-input-placeholder {
+  color: #555555;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #555555;
+}
+textarea:-moz-placeholder {
+  color: #555555;
+}
+textarea::-moz-placeholder {
+  color: #555555;
+}
+textarea:-ms-input-placeholder {
+  color: #555555;
+}
+
+label {
+  margin: 0;
+  display: block;
+}
+
+/*---------------------------------------------*/
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/******************************************************/
+body {
+  
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65) 0,
+    rgba(0, 0, 0, 0.65) 100%
+  ),
+  url(../images/bg-01.jpg);
+background-position: center;
+background-repeat: repeat;
+background-attachment: scroll;
+background-size: cover;
+min-height: 100vh;
+min-width: auto;
+display: flex;
+justify-content: center;
+}
+
+/****************************************************************************************/
+
+.container {
+  margin: 5px 15px;
+}
+
+form {
+  padding: 5px 25px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.formTitle {
+  font-family: Ubuntu-Bold;
+  font-size: 25px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.formElemnt {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 3px 0;
+}
+
+.inputElement {
+  font-family: Ubuntu-Regular;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  padding: 0 10px 0 80px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  bottom: 21px;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::after {
+  font-family: Linearicons-Free;
+  font-size: 16px;
+  color: #999999;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 35px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.genBtnClassCont {
+  width: 35%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genBtnClass {
+  margin: 15px 0;
+  font-family: Ubuntu-Bold;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  min-width: 70px;
+  height: 30px;
+  border-radius: 21px;
+
+  background: #d41872;
+  background: -webkit-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: -o-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: -moz-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: linear-gradient(left, #a445b2, #d41872, #fa4299);
+  position: relative;
+  z-index: 1;
+}
+
+.genBtnClass:hover {
+  background: #555555;
+}
+
+
+
+.btnsCont{
+  display: flex;
+  justify-content: center;
+}
+
+.hideAddbtn{
+  display: none;
+}
+
+.editBtnClass{
+  display: none;
+  
+}
+
+.viewEditBtn{
+  display: flex;
+  
+}
+
+
+
+/* New Div Styling*************************************************** */
+
+#newContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  margin: 0.25rem 0;
+}
+
+.item{
+  background-color: #fff;
+  border-radius: 10px;
+	padding: 0.2rem 0.25rem  1rem;
+	
+  margin: 0.25rem 0;
+  width: 100%;
+}
+
+.item_input{
+  font-family: Ubuntu-Regular;
+  display: block;
+  margin: 15px;
+	background: none;
+	outline: none;
+	border: none;
+	color: #555555;
+	font-size: 1.1rem;
+  width: 90%;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: start;
+}
+
+.edit{
+
+  cursor: pointer;
+  font-family: Ubuntu-Bold;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+
+  margin: 0 20px 0 10px;
+  padding: 0 5px;
+  min-width: 70px;
+  height: 30px;
+  border-radius: 21px;
+
+  background: #d41872;
+  background: -webkit-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: -o-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: -moz-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: linear-gradient(left, #a445b2, #d41872, #fa4299);
+  position: relative;
+  z-index: 1;
+}
+
+.edit:hover {
+  background: #555555;
+}
+
+.remove{
+  cursor: pointer;
+  font-family: Ubuntu-Bold;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+
+  margin: 0 10px 0 20px;
+  padding: 0 5px;
+  min-width: 70px;
+  height: 30px;
+  border-radius: 21px;
+
+  background: #d41872;
+  background: -webkit-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: -o-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: -moz-linear-gradient(left, #a445b2, #d41872, #fa4299);
+  background: linear-gradient(left, #a445b2, #d41872, #fa4299);
+  position: relative;
+  z-index: 1;
+}
+
+.remove:hover {
+  background: #555555;
+}
+
+/*******************************************/
